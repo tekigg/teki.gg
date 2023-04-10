@@ -1,0 +1,46 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_51_175" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-1" y="-232" >
+<line x1="84.5" y1="5.00009" x2="84.5" y2="1085" stroke="white"/>
+<line x1="184.5" y1="5.00009" x2="184.5" y2="1085" stroke="white"/>
+<line x1="284.5" y1="5.00009" x2="284.5" y2="1085" stroke="white"/>
+<line x1="384.5" y1="5.00009" x2="384.5" y2="1085" stroke="white"/>
+<line x1="484.5" y1="5.00009" x2="484.5" y2="1085" stroke="white"/>
+<line x1="584.5" y1="5.00009" x2="584.5" y2="1085" stroke="white"/>
+<line x1="684.5" y1="5.00009" x2="684.5" y2="1085" stroke="white"/>
+<line x1="784.5" y1="5.00009" x2="784.5" y2="1085" stroke="white"/>
+<line x1="884.5" y1="5.00009" x2="884.5" y2="1085" stroke="white"/>
+<line x1="984.5" y1="5.00009" x2="984.5" y2="1085" stroke="white"/>
+<line x1="1084.5" y1="5.00009" x2="1084.5" y2="1085" stroke="white"/>
+<line x1="1184.5" y1="5.00009" x2="1184.5" y2="1085" stroke="white"/>
+<line x1="1284.5" y1="5.00009" x2="1284.5" y2="1085" stroke="white"/>
+<line x1="1384.5" y1="5.00009" x2="1384.5" y2="1085" stroke="white"/>
+<line x1="1484.5" y1="5.00009" x2="1484.5" y2="1085" stroke="white"/>
+<line x1="1584.5" y1="5.00009" x2="1584.5" y2="1085" stroke="white"/>
+<line x1="1684.5" y1="5.00009" x2="1684.5" y2="1085" stroke="white"/>
+<line x1="1784.5" y1="5.00009" x2="1784.5" y2="1085" stroke="white"/>
+<line x1="1884.5" y1="5.00009" x2="1884.5" y2="1085" stroke="white"/>
+<line x1="1920" y1="68.5001" x2="-0.00012207" y2="68.5001" stroke="white"/>
+<line x1="1920" y1="168.5" x2="-0.00012207" y2="168.5" stroke="white"/>
+<line x1="1920" y1="268.5" x2="-0.00012207" y2="268.5" stroke="white"/>
+<line x1="1920" y1="368.5" x2="-0.00012207" y2="368.5" stroke="white"/>
+<line x1="1920" y1="468.5" x2="-0.00012207" y2="468.5" stroke="white"/>
+<line x1="1920" y1="568.5" x2="-0.00012207" y2="568.5" stroke="white"/>
+<line x1="1920" y1="668.5" x2="-0.00012207" y2="668.5" stroke="white"/>
+<line x1="1920" y1="768.5" x2="-0.00012207" y2="768.5" stroke="white"/>
+<line x1="1920" y1="868.5" x2="-0.00012207" y2="868.5" stroke="white"/>
+<line x1="1920" y1="968.5" x2="-0.00012207" y2="968.5" stroke="white"/>
+<line x1="1920" y1="1068.5" x2="-0.00012207" y2="1068.5" stroke="white"/>
+</mask>
+<g mask="url(#mask0_51_175)">
+<g filter="url(#filter0_f_51_175)">
+<ellipse cx="890.5" cy="367.5" rx="774.5" ry="462.5" fill="#D9D9D9" fill-opacity="0.3"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_51_175" x="-327" y="-538" width="2435" height="1811" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="221.5" result="effect1_foregroundBlur_51_175"/>
+</filter>
+</defs>
+</svg>
