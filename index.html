@@ -12,14 +12,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <body>
-
+    <div id="noise" draggable="false"></div>
     <div id="main-content">
         <div id="logo-wrapper">
             <img id="logo" src="public/assets/logo.svg" draggable="false">
         </div>
         <div id="terminal">
             <div id="terminal-right">
+                <span id="terminal-text-container">
+                <div class="ping"></div>
+                <p class="terminal-text">CONNECTION OPERATIONAL 00 // [
+CURDATE: 1.1.2024
+CURTIME: 3:30 PM
+CURACTV: BUSY - STUDYING
+]
+                     </p>
+                </span>
+                <span>
+                <p id="coords">LOADING GEO DATA... //</p>
                 <p class="ml16">o(*￣︶￣*)ブ↗</p>
+                <p class="ml16">HELLO, HELLO!</p>
+                </span>
 
             </div>
             <img src="public/test-assets/SVG/edge-crop.svg" id="terminal-left" draggable="false">
@@ -27,8 +40,9 @@
     </div>
     <div class="vignette"></div>
     <!-- <img class="gradients" src="public/assets/gradients.svg"> -->
-    <lottie-player class="gradients" src="https://cdn.discordapp.com/attachments/1074119513735430256/1095100247438528572/Halo.json" background="transparent"  speed="1"  style="width: 100vw; height: 100vh;" loop controls autoplay></lottie-player>
-    <div id="tiles"></div>
+    <div  class="gradients"><lottie-player src="https://raw.githubusercontent.com/iiiklox/main/master/public/animation/Halo.json" background="transparent" resizeMode='cover' style="width: 100vw;" speed="1" loop autoplay></lottie-player>
+    </div>
+        <div id="tiles"></div>
 
 </body>
 
