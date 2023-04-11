@@ -1,7 +1,7 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
 
@@ -304,6 +304,7 @@ body {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-transform-style: preserve-3d;
@@ -463,7 +464,7 @@ body {
   -webkit-transition: ease all .5s;
   -o-transition: ease all .5s;
   transition: ease all .5s;
-  padding: 80px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
