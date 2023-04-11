@@ -436,7 +436,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
   /* for mobile devices */
   #terminal-text-container {
     max-width: 30vw;
@@ -474,7 +474,7 @@ body {
 }
 
  /* aa */
-@media only screen and (max-width: 1040px) {
+@media (max-width: 1040px) {
   /* for mobile devices */
   #logo {
     opacity: 0%;
@@ -511,7 +511,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   /* for mobile devices */
   #main-content {
     visibility: hidden;
