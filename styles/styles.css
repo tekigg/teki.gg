@@ -304,6 +304,21 @@ body {
     font-size: 50px;
   }
 }
+
+#Mobile-support {
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  z-index: 98;
+  background-color: #000000a4;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  transition: ease all .5s;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+}
+
  /* aa */
 @media (max-width: 1040px) {
   /* for mobile devices */
@@ -337,5 +352,16 @@ body {
     transform: scale(0.6) rotate(-20deg);
     margin-left: -200px
 
+  }
+}
+
+@media (max-width: 600px) {
+  /* for mobile devices */
+  #main-content {
+    visibility: hidden;
+  }
+  #Mobile-support {
+    visibility: visible;
+  
   }
 }
