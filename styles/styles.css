@@ -138,6 +138,7 @@ body {
   font-size: 80px;
   overflow: hidden;
   font-weight: 700;
+  transition: ease all .5s;
 
 }
 
@@ -181,7 +182,7 @@ body {
 }
 
 #logo {
-
+  transition: ease all .5s;
   height: 100%;
 }
 
@@ -195,7 +196,7 @@ body {
   perspective: 1000px;
   transform-style: preserve-3d;
   transform: rotateY(0deg) rotateX(0deg);
-  transition: 0.01s;
+
 }
 #terminal:hover {
   
@@ -244,7 +245,7 @@ body {
   font-family: 'Azeret Mono';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
   overflow: hidden;
   
 }
@@ -275,26 +276,66 @@ body {
 }
 
 #strip {
-  width: 650px;
-  height: 60px;
-  background-color: #FFC227;
+  
   transform: rotate(-20deg) translate(-140px, 0px);
   position: absolute;
   z-index: 10;
-  padding-top: 3px;
-  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.824);
 
 }
-
-#strip-text {
-  animation: slideshow 10s linear infinite;
-  width: 80%;
-  overflow: hidden;
-  left: 0;
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
 }
 
-@keyframes moveSlideshow {  
-  100% { 
-    -webkit-transform: translateX(-200%);  
+@media (max-width: 1280px) {
+  /* for mobile devices */
+  #terminal-text-container {
+    max-width: 30vw;
+  }
+  #coords {
+    font-size: 12px;
+  }
+  .terminal-text {
+    font-size: 10px;
+  }
+  .ml16 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1040px) {
+  /* for mobile devices */
+  #logo {
+    opacity: 0%;
+    width: 0px;
+    margin-right: 0px;
+  }
+  #terminal-text-container {
+    max-width: 30vw;
+  }
+  #coords {
+    font-size: 12px;
+  }
+  .terminal-text {
+    font-size: 10px;
+  }
+  .ml16 {
+    font-size: 30px;
+  }
+  #logo-wrapper {
+    width: 0px;
+    margin-right: 0vw;
+
+  }
+  #main-content {
+    padding: 10px;
+  }
+  #strip {
+    width: 500px;
+    transform: scale(0.6) rotate(-20deg);
+    margin-left: -200px
+
   }
 }
