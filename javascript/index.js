@@ -139,3 +139,23 @@ terminalText.onmouseover = event => {
   
   animateText(event.target, oldText, newText);
 }
+
+// 3D effect
+const terminal = document.querySelector('#terminal');
+
+document.addEventListener('mousemove', e => {
+  const rect = terminal.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  const rotateX = -(mouseY - centerY) / 50; // negate the value of rotateX
+  const rotateY = -(mouseX - centerX) / 50; // negate the value of rotateY
+  
+  terminal.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+terminal.addEventListener('mouseleave', () => {
+  terminal.style.transform = '';
+});
+

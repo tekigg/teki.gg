@@ -13,6 +13,7 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <body>
     <div id="noise" draggable="false"></div>
+    <div id="strip"><img id="strip-text" src="public/test-assets/SVG/strip.svg"></div>
     <div id="main-content">
         <div id="logo-wrapper">
             <img id="logo" src="public/assets/logo.svg" draggable="false">
@@ -20,7 +21,7 @@
         <div id="terminal">
             <div id="terminal-right">
                 <span id="terminal-text-container">
-                <div class="ping"></div>
+                    <lottie-player renderer="html" class="ping" src="https://raw.githubusercontent.com/iiiklox/main/master/public/animation/Ping-green.json" background="transparent" resizeMode='cover' speed="1" loop autoplay></lottie-player>
                 <p class="terminal-text">CONNECTION OPERATIONAL 00 // [
 CURDATE: 1.1.2024
 CURTIME: 3:30 PM
@@ -40,7 +41,7 @@ CURACTV: BUSY - STUDYING
     </div>
     <div class="vignette"></div>
     <!-- <img class="gradients" src="public/assets/gradients.svg"> -->
-    <div  class="gradients"><lottie-player src="https://raw.githubusercontent.com/iiiklox/main/master/public/animation/Halo.json" background="transparent" resizeMode='cover' style="width: 100vw;" speed="1" loop autoplay></lottie-player>
+    <div id="gradients"  class="gradients"><lottie-player src="https://raw.githubusercontent.com/iiiklox/main/master/public/animation/Halo.json" background="transparent" resizeMode='cover' style="width: 100vw; will-change: transform; transform: translateZ(0); " speed="1" loop autoplay></lottie-player>
     </div>
         <div id="tiles"></div>
 
