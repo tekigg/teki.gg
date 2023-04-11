@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@700&display=swap');
-
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes animateGradient {
   0% {
     transform: translateY(+100%);
@@ -8,6 +15,33 @@
 
   100% {
     transform: translateY(+10%);
+    opacity: 100%;
+  }
+}
+
+@keyframes tooltip {
+  0% {
+    top:0;
+    opacity: 0%;
+  }
+
+  50% {
+    top:-10px;
+    opacity: 100%;
+  }
+
+  100% {
+    top:-20px;
+    opacity: 0%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
     opacity: 100%;
   }
 }
@@ -205,13 +239,15 @@ body {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
-  
+
 
 }
 
 
 #terminal-right {
-  padding: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   /* filter: drop-shadow(0px 0px 20px black); */
   display: flex;
   flex-direction: column;
@@ -248,11 +284,13 @@ body {
   font-weight: 400;
   font-size: 13px;
   overflow: hidden;
-  
+  max-width: 600px;
+  word-wrap: break-word;
 }
 
 #terminal-text-container {
-  max-width: 60vw;
+  max-width: 100%;
+  word-wrap:normal;
   display: flex;
 }
 
@@ -268,12 +306,17 @@ body {
 
 #coords {
   animation: 2s ease-in-out 1 animateGradient normal forwards;
-  color: #ffffff !important;
+  color: #ffffff6f !important;
   font-family: Inter;
   font-style: italic;
   font-size: 20px;
   overflow: hidden;
   font-weight: 300;
+}
+
+.pulse {
+  opacity: 100%;
+  animation: pulse 2s linear infinite;
 }
 
 #strip {
@@ -284,26 +327,86 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.824);
 
 }
-@media screen and (min-width: 480px) {
-  body {
-    background-color: lightgreen;
-  }
+
+#button {
+  width: 40%;
+  position: absolute;
+  z-index: 95;
+  top: 30%;
+  right: 1%;
+  border-radius: 100px;
+  transition: width 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  opacity: 100%;
+  
+   filter: drop-shadow(0px 0px 60px #ffc22780);
+}
+#button:hover {
+  width: 50%;
+
+
+}
+#button:active {
+  width: 48%;
+
 }
 
-@media (max-width: 1280px) {
-  /* for mobile devices */
-  #terminal-text-container {
-    max-width: 30vw;
-  }
-  #coords {
-    font-size: 12px;
-  }
-  .terminal-text {
-    font-size: 10px;
-  }
-  .ml16 {
-    font-size: 50px;
-  }
+#socials {
+  display: flex;
+  opacity: 0%;
+  margin-top: -50px;
+  transition: margin-top 0.25s,opacity 0.25s ;
+  cursor:default;
+pointer-events: none;
+}
+
+.social-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100px;
+height: 100px;
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid #333333;
+box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+border-radius: 17px;
+margin-right: 20px;
+transition: margin-top 0.25s;
+transform: translateY(0px);
+
+
+
+
+}
+
+.social-box:hover {
+  margin-top: -5px;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+
+}
+
+.social-icon {
+  height: 60px;
+}
+
+#discord {
+  transition: 0.25s;
+}
+
+#discord:active {
+  margin-top: -10px;
+}
+.tooltip {
+  animation: tooltip 0.5s ease-in-out forwards;
+}
+#tooltip {
+  position: absolute;
+  color: white;
+  font-family: Inter, sans-serif;
+  top: 0;
+  opacity: 0%;
+  
 }
 
 #Mobile-support {
@@ -320,25 +423,60 @@ body {
   align-items: center;
 }
 
- /* aa */
-@media (max-width: 1040px) {
+@media (max-width: 1280px) {
   /* for mobile devices */
+  #terminal-text-container {
+    max-width: 40vw;
+  }
+  #coords {
+    font-size: 12px;
+  }
+  .terminal-text {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .ml16 {
+    font-size: 6vw;
+  }
+
+}
+
+
+
+@media (max-width: 1040px) {
   #logo {
     opacity: 0%;
     width: 0px;
     margin-right: 0px;
   }
   #terminal-text-container {
-    max-width: 30vw;
+    max-width: 60vw;
+  }
+  #socials {
+    transform: scale(0.8);
+  }
+  #button {
+
+    width: 45%;
+    margin-bottom: -1000px;
+  }
+  #button:hover {
+    width: 55%;
+    margin-bottom: -1000px;
+  }
+  #button:active {
+    width: 50%;
+    margin-bottom: -1000px;
   }
   #coords {
     font-size: 12px;
   }
   .terminal-text {
-    font-size: 10px;
+    font-size: 12px;
+    width: 100%;
   }
   .ml16 {
-    font-size: 30px;
+    font-size: 8.5vw;
   }
   #logo-wrapper {
     width: 0px;
