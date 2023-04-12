@@ -369,6 +369,7 @@ setInterval(() => {
 
 const tooltipTexts = ['COPIED!', 'DOUBLE COPY!', 'TRIPLE COPY!', 'DOMINATING!', 'RAMPAGE!', 'MEGA COPY!', 'UNSTOPPABLE!', 'WICKED SICK!', 'MONSTER COPY!', 'GODLIKE!!', 'BEYOND GODLIKE!!!!'];
 let clicks = 0;
+let timeoutId;
 
 buttonDiscord.addEventListener('click', () => {
   copyToClipboard(discordID);
@@ -377,4 +378,9 @@ buttonDiscord.addEventListener('click', () => {
   tooltip.offsetWidth;
   tooltip.classList.add('tooltip');
   clicks++;
+
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => {
+    clicks = 0;
+  }, 2000);
 });
