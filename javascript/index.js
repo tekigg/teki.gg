@@ -486,7 +486,7 @@ buttonDiscord.addEventListener('click', () => {
 
 // lottie animation trigger
 let myPlayer = document.getElementById("mobile-support-player");
-let mediaQuery = window.matchMedia("(max-width: 600px)");
+let mediaQuery = window.matchMedia("(max-width: 600px) or (max-height: 550px)");
 
 mediaQuery.addListener(function() {
   if (mediaQuery.matches) {

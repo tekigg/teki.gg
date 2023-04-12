@@ -344,13 +344,14 @@ body {
   visibility: hidden;
   height: 100vh;
   width: 100vw;
-  z-index: 98;
+  z-index: 1000;
   background-color: #000000a4;
   position: absolute;
   backdrop-filter: blur(10px);
   padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #spotify-player-container {
@@ -521,7 +522,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) or (max-height: 550px)  {
   /* for mobile devices - show mobile not supported */
   #main-content {
     visibility: hidden;
