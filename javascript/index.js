@@ -36,11 +36,36 @@ createGrid();
 
 window.onresize = () => createGrid();
 
-// Wrap every letter in a span
-var textWrappers = document.querySelectorAll('.ml16');
-textWrappers.forEach(function (textWrapper) {
-  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-  setTimeout(function () {
+// Text animation ---------------------------------
+
+function animateText(topText, bottomText, outAnimationEnabled) {
+  var textWrappers = document.querySelectorAll('.ml16');
+
+  if (outAnimationEnabled) {
+    anime.timeline({ loop: false })
+      .add({
+        targets: '.ml16 .letter',
+        translateY: [0, 300],
+        opacity: [1, 0],
+        easing: "easeInExpo",
+        duration: 1000,
+        delay: (el, i) => 40 * i,
+        complete: function() {
+          setText(topText, bottomText);
+          animateIn();
+        }
+      });
+  } else {
+    setText(topText, bottomText);
+    animateIn();
+  }
+
+  function setText(topText, bottomText) {
+    textWrappers[0].innerHTML = topText.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrappers[1].innerHTML = bottomText.replace(/\S/g, "<span class='letter'>$&</span>");
+  }
+
+  function animateIn() {
     anime.timeline({ loop: false })
       .add({
         targets: '.ml16 .letter',
@@ -50,8 +75,14 @@ textWrappers.forEach(function (textWrapper) {
         duration: 1400,
         delay: (el, i) => 40 * i
       });
-  }, 1000);
-});
+  }
+}
+setTimeout(function() {
+  animateText("o(*￣︶￣*)ブ↗", "HELLO, HELLO!", false)
+
+}, 1000);
+
+
 
 // coooooordssssssssss ---------------------------------------
 
@@ -353,6 +384,7 @@ const spotify = document.getElementById('spotify-player-container')
 function animateIn() {
   IsTimeState = false
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
+  animateText("`(*>﹏<*)′↗", "ABOUT ME!", true)
   randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
   spotify.style.opacity = "0%"
   spotify.style.marginTop = "-100px"
@@ -371,6 +403,8 @@ function animateIn() {
 
 function animateOut() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
+  animateText("o(*￣︶￣*)ブ↗", "HELLO, HELLO!", true)
+
 
   terminalText.style.fontSize = "15px"
   socials.style.opacity = "0%"
