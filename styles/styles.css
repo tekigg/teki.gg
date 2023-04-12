@@ -7,6 +7,8 @@
     transform: rotate(360deg);
   }
 }
+
+
 @keyframes animateGradient {
   0% {
     transform: translateY(+100%);
