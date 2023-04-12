@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@700&display=swap');
 
+
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -340,6 +342,12 @@ body {
   opacity: 0%;
 }
 
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
+#mobile-support-player {
+  height: 110vh;
+}
+
 #Mobile-support {
   visibility: hidden;
   height: 100vh;
@@ -348,11 +356,12 @@ body {
   background-color: #000000a4;
   position: absolute;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+}}
 
 #spotify-player-container {
   position: absolute;
