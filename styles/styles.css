@@ -349,7 +349,10 @@ body {
   width: 48%;
 
 }
-
+::selection {
+  background-color: #ffc227 ; /* set the highlight color to orange */
+  color: black; /* set the text color to white */
+}
 #socials {
   display: flex;
   opacity: 0%;
