@@ -320,11 +320,11 @@ function animateIn() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
   randomizeText(`Hola!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nI'm a graphic designer, VFX artist, amature developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
   socials.style.opacity = "100%"
-  socials.style.marginTop = "-100px"
+  socials.style.marginTop = "0px"
   socials.style.pointerEvents = "all"
   socials.style.cursor = "pointer"
   terminalText.style.transition = "1s"
-  terminalText.style.fontSize = `${parseInt(fontSize) + 3}px`
+  terminalText.style.fontSize = `${parseInt(fontSize) + 2}px`
 
 
 }
@@ -334,13 +334,13 @@ function animateOut() {
 
   terminalText.style.fontSize = "15px"
   socials.style.opacity = "0%"
-  socials.style.marginTop = "-50px"
+  socials.style.marginTop = "100px"
   IsTimeState = true;
   LastMinute = 0;
   updateTime();
   socials.style.pointerEvents = "none"
   socials.style.cursor = "none"
-  terminalText.style.fontSize = `${parseInt(fontSize) - 3}px`
+  terminalText.style.fontSize = `${parseInt(fontSize) - 2}px`
 
 }
 // button events
