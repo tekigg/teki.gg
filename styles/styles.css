@@ -175,7 +175,7 @@ body {
 
 .ml16 {
   color: #ffffff !important;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
 
   font-size: 6rem;
   overflow: hidden;
@@ -284,7 +284,7 @@ body {
 .terminal-text {
   white-space: pre-wrap;
   color: #ffffff !important;
-  font-family: 'Azeret Mono';
+  font-family: 'Azeret Mono', monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -312,7 +312,7 @@ body {
 #coords {
   animation: 2s ease-in-out 1 animateGradient normal forwards;
   color: #ffffff6f !important;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: italic;
   font-size: 20px;
   overflow: hidden;
@@ -418,7 +418,7 @@ transform: translateY(0px);
   width: 100%;
   position: absolute;
   color: white;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
   top: 0;
   opacity: 0%;
   
