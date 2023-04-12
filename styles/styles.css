@@ -178,7 +178,7 @@ body {
   color: #ffffff !important;
   font-family: Inter;
 
-  font-size: 80px;
+  font-size: 6rem;
   overflow: hidden;
   font-weight: 700;
   transition: ease all .5s;
@@ -445,8 +445,8 @@ transform: translateY(0px);
   top:10.5rem;
   transition: 0.25s;
   box-sizing: border-box;
-  width: 400px;
-  height: 100px;
+  width: 25rem;
+  height: 6rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #333333;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
@@ -495,7 +495,7 @@ transform: translateY(0px);
 #song {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 #artist {
