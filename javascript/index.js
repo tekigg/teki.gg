@@ -341,11 +341,11 @@ let isButtonActive = false;
 function animateIn() {
   IsTimeState = false
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
-  randomizeText(`Hola!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nI'm a graphic designer, VFX artist, amature developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
+  randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
   spotify.style.opacity = "0%"
   spotify.style.marginTop = "-100px"
   spotify.style.visibility = "hidden"
-
+  spotify.classList.remove('hoverPlayer');
   
   socials.style.opacity = "100%"
   socials.style.marginTop = "0px"
@@ -372,6 +372,7 @@ function animateOut() {
   spotify.style.opacity = "100%"
   spotify.style.marginTop = "0px"
   spotify.style.visibility = "visible"
+  spotify.classList.add('hoverPlayer');
 }
 // button events
 button.addEventListener('click', () => {
