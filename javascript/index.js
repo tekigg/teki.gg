@@ -334,9 +334,7 @@ const socials = document.getElementById('socials')
 const discordID = "Teki#0001"
 const style = window.getComputedStyle(terminalText);
 const spotify = document.getElementById('spotify-player-container')
-let rotSpeed = 1;
-let isCooldownActive = false;
-let isButtonActive = false;
+
 
 function animateIn() {
   IsTimeState = false
@@ -374,28 +372,51 @@ function animateOut() {
   spotify.style.visibility = "visible"
   spotify.classList.add('hoverPlayer');
 }
-// button events
+
+let isCooldownActive = false;
+let isButtonActive = false;
+let angle = 0;
+
+function getAngle(){
+  const transform = window.getComputedStyle(button).getPropertyValue("transform");
+  const matrix = transform.match(/^matrix\((.+)\)$/);
+  let angle = 0;
+  if (matrix) {
+    const matrixValues = matrix[1].split(',').map(parseFloat);
+    angle = Math.round(Math.atan2(matrixValues[1], matrixValues[0]) * (180/Math.PI));
+  }
+  return angle
+}
+
+function animateButton(degrees) {
+  anime({
+    targets: button,
+    rotate: degrees,
+    duration: 1000,
+    easing: 'linear',
+    complete: function() {
+      angle = degrees % 360;
+      animateButton(angle + 360);
+    }
+  });
+}
+
 button.addEventListener('click', () => {
   if (!isCooldownActive) {
     isCooldownActive = true;
-    button.style.opacity = "60%"
-    rotSpeed = 0.1
-    isButtonActive ? (isButtonActive = false, animateOut()) : (isButtonActive = true, animateIn());
-    setTimeout(() => {
-      rotSpeed = 0.5
-      isCooldownActive = false;
 
-      button.style.opacity = "100%"
+    const initialAngle = getAngle();
+    button.style.opacity = "60%";
+    isButtonActive ? (isButtonActive = false, animateOut()) : (isButtonActive = true, animateIn());
+    animateButton(initialAngle + 360);
+    setTimeout(() => {
+      isCooldownActive = false;
+      button.style.opacity = "100%";
     }, 3000);
   }
 });
 
 
-let angle = 0;
-setInterval(() => {
-  angle += rotSpeed;
-  button.style.transform = `rotate(${angle}deg)`;
-}, 10);
 
 const tooltipTexts = ['COPIED!', 'DOUBLE COPY!', 'TRIPLE COPY!', 'DOMINATING!', 'RAMPAGE!', 'MEGA COPY!', 'UNSTOPPABLE!', 'WICKED SICK!', 'MONSTER COPY!', 'GODLIKE!!', 'BEYOND GODLIKE!!!!'];
 let clicks = 0;
