@@ -207,8 +207,8 @@ function updateTime() {
     { start: 3, end: 11, value: "ASLEEP - ZZZ", color: "yellow" },
     { start: 11, end: 17, value: "BUSY - STUDYING", color: "red"  },
     { start: 17, end: 19, value: "FREE", color: "green"  },
-    { start: 19, end: 23, value: "BUSY - STUDYING", color: "red"  },
-    { start: 23, end: 27, value: "FREE", color: "green"  }
+    { start: 19, end: 24, value: "BUSY - STUDYING", color: "red"  },
+    { start: 0, end: 3, value: "FREE", color: "green"  }
   ];
 
   let curActv = "UNKNOWN";
