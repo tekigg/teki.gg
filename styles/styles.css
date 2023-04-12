@@ -362,6 +362,7 @@ body {
   color: black; /* set the text color to white */
 }
 #socials {
+
   display: flex;
   opacity: 0%;
   margin-top: 100px;
