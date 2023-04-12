@@ -170,11 +170,30 @@ function updateTime() {
   const curDate = now.toLocaleDateString("en-US", optionsDate);
   const curTime = now.toLocaleTimeString("en-US", optionsTime);
 
+  const activities = [
+    { start: 3, end: 11, value: "ASLEEP - ZZZ" },
+    { start: 11, end: 17, value: "BUSY - STUDYING" },
+    { start: 17, end: 19, value: "FREE" },
+    { start: 19, end: 23, value: "BUSY - STUDYING" },
+    { start: 23, end: 27, value: "FREE" }
+  ];
+
+  let curActv = "UNKNOWN";
+  for (let i = 0; i < activities.length; i++) {
+    const { start, end, value } = activities[i];
+    const curHour = now.getHours();
+    if (curHour >= start && curHour < end) {
+      curActv = value;
+      break;
+    }
+  }
+
   // Create the initial text string
-  const oldText = `CONNECTION OPERATIONAL 00 // [\nCURDATE: ${curDate}\nCURTIME: ${curTime}\nCURACTV: BUSY - STUDYING\n]`;
+  const oldText = `CONNECTION OPERATIONAL 00 // [\nCURDATE: ${curDate}\nCURTIME: ${curTime}\nCURACTV: ${curActv}\n]`;
 
   randomizeText(oldText);
 }
+
 
 var LastMinute = ''
 
