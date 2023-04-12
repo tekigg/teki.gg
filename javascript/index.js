@@ -379,10 +379,10 @@ button.addEventListener('click', () => {
   if (!isCooldownActive) {
     isCooldownActive = true;
     button.style.opacity = "60%"
-    rotSpeed = 0.2
+    rotSpeed = 0.1
     isButtonActive ? (isButtonActive = false, animateOut()) : (isButtonActive = true, animateIn());
     setTimeout(() => {
-      rotSpeed = 1
+      rotSpeed = 0.5
       isCooldownActive = false;
 
       button.style.opacity = "100%"
