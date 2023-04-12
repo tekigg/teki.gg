@@ -80,10 +80,14 @@
 @keyframes backdrop-blur-gradual {
   0% {
     backdrop-filter: blur(0px);
+    --tw-backdrop-blur: blur(0px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 
   100% {
     backdrop-filter: blur(3px);
+    --tw-backdrop-blur: blur(3px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   }
 }
 
@@ -92,6 +96,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+a {
+  text-decoration: none;
 }
 
 body {
@@ -429,6 +436,73 @@ transform: translateY(0px);
   padding: 20px;
   display: flex;
   align-items: center;
+}
+
+#spotify-player-container {
+  position: absolute;
+  top:20%;
+  transition: 0.25s;
+  box-sizing: border-box;
+  width: 400px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333333;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 13px;
+}
+
+#spotify-player-container:hover {
+  cursor: pointer;
+  margin-top: -5px;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+}
+
+#spotify-player-container:active {
+  margin-top: -5px;
+  transform: scale(0.97);
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+}
+
+#cover {
+  margin-right: 10px;
+  border-radius: 5px;
+  height: 100%;
+}
+
+#song-details {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  font-size: 10px;
+  align-items: flex-start;
+  color: aliceblue;
+  max-height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#song {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+#artist {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.697);
+  font-weight: 300;
+}
+
+#spotify-logo {
+  height: 50%;
+  margin-right: 5px;
 }
 
 @media (max-width: 1280px) {

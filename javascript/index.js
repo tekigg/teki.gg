@@ -333,7 +333,7 @@ const terminalText = document.querySelector('.terminal-text');
 const socials = document.getElementById('socials')
 const discordID = "Teki#0001"
 const style = window.getComputedStyle(terminalText);
-
+const spotify = document.getElementById('spotify-player-container')
 let rotSpeed = 1;
 let isCooldownActive = false;
 let isButtonActive = false;
@@ -342,6 +342,11 @@ function animateIn() {
   IsTimeState = false
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
   randomizeText(`Hola!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nI'm a graphic designer, VFX artist, amature developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
+  spotify.style.opacity = "0%"
+  spotify.style.marginTop = "-100px"
+  spotify.style.visibility = "hidden"
+
+  
   socials.style.opacity = "100%"
   socials.style.marginTop = "0px"
   socials.style.pointerEvents = "all"
@@ -364,7 +369,9 @@ function animateOut() {
   socials.style.pointerEvents = "none"
   socials.style.cursor = "none"
   terminalText.style.fontSize = `${parseInt(fontSize) - 2}px`
-
+  spotify.style.opacity = "100%"
+  spotify.style.marginTop = "0px"
+  spotify.style.visibility = "visible"
 }
 // button events
 button.addEventListener('click', () => {
@@ -421,3 +428,39 @@ mediaQuery.addListener(function() {
     myPlayer.stop();
   }
 });
+
+
+// define a function to update the song and artist elements
+function updateSongAndArtist() {
+  // make a GET request to the Last.fm API
+  fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=iiiklox&api_key=e66a732fdbce384356a4fb2ea2dba5f8&format=json&limit=1", {
+  })
+    .then(response => response.json()) // parse the response as JSON
+    .then(data => {
+      // check if data contains song and artist names
+      const track = data.recenttracks.track[0];
+      const isPaused = !track['@attr'] || !track['@attr'].nowplaying;
+      const songName = track.name;
+      if (!isPaused) {
+        // update the text content of the song and artist elements
+        document.getElementById("spotify-player-container").href = `https://open.spotify.com/search/${songName}-${track.artist['#text']}`;
+        document.getElementById("song").textContent = songName;
+        document.getElementById("artist").textContent = track.artist['#text'];
+        document.getElementById("cover").src = track.image[2]["#text"];
+      } else {
+        // show placeholder message
+        document.getElementById("spotify-player-container").href = "https://spotify.com";
+        document.getElementById("song").textContent = "Enjoying Silence";
+        document.getElementById("artist").textContent = "By Themselves";
+        document.getElementById("cover").src = "https://cdn.discordapp.com/emojis/911233187118723112.gif?size=128&quality=lossless";
+      }
+    })
+    .catch(error => console.error(error)); // handle any errors
+}
+
+
+// call the function to update song and artist elements initially
+updateSongAndArtist();
+
+// update song and artist elements every 5 seconds
+setInterval(updateSongAndArtist, 2000);
