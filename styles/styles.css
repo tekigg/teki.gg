@@ -527,6 +527,13 @@ body {
   #main-content {
     visibility: hidden;
   }
+  #strip {
+    visibility: hidden;
+  }
+  body {
+    overflow: hidden;
+  }
+
   #Mobile-support {
     visibility: visible;
   }
