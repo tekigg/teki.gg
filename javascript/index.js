@@ -193,7 +193,7 @@ function updateTime() {
   }
 
   // Create the initial text string
-  const oldText = `CONNECTION OPERATIONAL 00 // [\nCURDATE: ${curDate}\nCURTIME: ${curTime}\nCURACTV: ${curActv}\n]`;
+  const oldText = `CONNECTION OPERATIONAL 00 // [\nCURDATE: ${curDate}\nCURTIME: ${curTime}\nCURACTV: ${curActv}\n]\n\nCurrently listening to...`;
 
   randomizeText(oldText);
 }
@@ -381,7 +381,6 @@ button.addEventListener('click', () => {
     button.style.opacity = "60%"
     rotSpeed = 0.2
     isButtonActive ? (isButtonActive = false, animateOut()) : (isButtonActive = true, animateIn());
-    console.log(isButtonActive)
     setTimeout(() => {
       rotSpeed = 1
       isCooldownActive = false;
@@ -464,4 +463,4 @@ function updateSongAndArtist() {
 updateSongAndArtist();
 
 // update song and artist elements every 5 seconds
-setInterval(updateSongAndArtist, 2000);
+setInterval(updateSongAndArtist, 10000);

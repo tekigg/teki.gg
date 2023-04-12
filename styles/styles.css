@@ -442,7 +442,7 @@ transform: translateY(0px);
 
 #spotify-player-container {
   position: absolute;
-  top:20%;
+  top:10.5rem;
   transition: 0.25s;
   box-sizing: border-box;
   width: 400px;
@@ -576,6 +576,10 @@ transform: translateY(0px);
     width: 500px;
     transform: scale(0.6) rotate(-20deg);
     margin-left: -200px
+
+  }
+  #spotify-player-container {
+    top:10rem;
 
   }
 }
