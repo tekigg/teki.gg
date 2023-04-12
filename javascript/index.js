@@ -307,23 +307,37 @@ function copyToClipboard(str) {
 }
 
 // 3D effect
-const terminal = document.querySelector('#terminal');
+const pre = document.querySelector("#terminal");
 
-document.addEventListener('mousemove', e => {
-  const rect = terminal.getBoundingClientRect();
-  const mouseX = e.clientX - rect.left;
-  const mouseY = e.clientY - rect.top;
-  const centerX = rect.width / 2;
-  const centerY = rect.height / 2;
-  const rotateX = -(mouseY - centerY) / 70; // negate the value of rotateX
-  const rotateY = -(mouseX - centerX) / 70; // negate the value of rotateY
-
-  terminal.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+document.addEventListener("mousemove", (e) => {
+  rotateElement(e, pre);
 });
 
-terminal.addEventListener('mouseleave', () => {
-  terminal.style.transform = '';
-});
+function rotateElement(event, element) {
+  // get mouse position
+  const x = event.clientX;
+  const y = event.clientY;
+  // console.log(x, y)
+
+  // find the middle
+  const middleX = window.innerWidth / 2;
+  const middleY = window.innerHeight / 2;
+  // console.log(middleX, middleY)
+
+  // get offset from middle as a percentage
+  // and tone it down a little
+  const offsetX = ((x - middleX) / middleX) * 10;
+  const offsetY = ((y - middleY) / middleY) * 10;
+  // console.log(offsetX, offsetY);
+
+  // set rotation
+  element.style.setProperty("--rotateX", offsetX + "deg");
+  element.style.setProperty("--rotateY", -1 * offsetY + "deg");
+}
+
+
+
+
 
 // button rotate
 const button = document.getElementById('button');

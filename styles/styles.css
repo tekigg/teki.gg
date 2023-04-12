@@ -236,9 +236,8 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  perspective: 1000px;
   transform-style: preserve-3d;
-  transform: rotateY(0deg) rotateX(0deg);
+  transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
 
 }
 #terminal:hover {
