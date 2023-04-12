@@ -129,6 +129,7 @@ body {
   color: #ffffff !important;
   display: inline-block;
   line-height: 1em;
+  
 }
 
 .vignette {
@@ -177,6 +178,7 @@ body {
 }
 
 #terminal-right {
+  transition: 0.25s;
   padding-left: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -198,6 +200,7 @@ body {
 }
 
 #terminal-left {
+  transition: 0.25s;
   height: 100%;
   transform: translate(-1px, 0px);
   box-shadow: 40px 40px 50px rgba(0, 0, 0, 0.345);
@@ -214,12 +217,15 @@ body {
   overflow: hidden;
   max-width: 600px;
   word-wrap: break-word;
+  margin-left: 1vw;
+
 }
 
 #terminal-text-container {
   max-width: 100%;
   word-wrap: normal;
   display: flex;
+
 }
 
 .ping {
@@ -227,7 +233,7 @@ body {
   margin-top: -5px;
   width: 30px;
   height: 30px;
-  position: relative;
+  position: absolute;
   margin-right: 10px;
 }
 
@@ -421,6 +427,7 @@ body {
     font-size: 1.2rem;
   }
   .terminal-text {
+    
     font-size: 0.8rem;
   }
   .ml16 {
@@ -435,11 +442,16 @@ body {
     margin-right: 0;
   }
   #terminal-text-container {
-    max-width: 60vw;
+    max-width: 50vw;
+    margin-right: -5rem;
+
+  }
+  #spotify-player-container {
+    width: 22rem;
   }
   #socials {
     transform: scale(0.8);
-    top: 7rem;
+    top: 20%;
     flex-direction: column;
     position: absolute;
   }
@@ -467,11 +479,11 @@ body {
   }
   .terminal-text {
     font-size: 0.8rem;
-
     width: 100%;
   }
   .ml16 {
     font-size: 8.5vw;
+    margin-right: -10rem;
   }
   #logo-wrapper {
     width: 0;
