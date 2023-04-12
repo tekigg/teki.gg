@@ -353,7 +353,7 @@ body {
 #socials {
   display: flex;
   opacity: 0%;
-  margin-top: -50px;
+  margin-top: 100px;
   transition: margin-top 0.25s,opacity 0.25s ;
   cursor:default;
 pointer-events: none;
