@@ -163,6 +163,8 @@ function randomizeText(newText) {
 
 
 function updateTime() {
+  const ping = document.querySelector('.ping');
+
   const now = new Date();
   const optionsDate = { timeZone: "Asia/Baghdad" };
   const optionsTime = { timeZone: "Asia/Baghdad", hour: 'numeric', minute: 'numeric' };
@@ -171,19 +173,21 @@ function updateTime() {
   const curTime = now.toLocaleTimeString("en-US", optionsTime);
 
   const activities = [
-    { start: 3, end: 11, value: "ASLEEP - ZZZ" },
-    { start: 11, end: 17, value: "BUSY - STUDYING" },
-    { start: 17, end: 19, value: "FREE" },
-    { start: 19, end: 23, value: "BUSY - STUDYING" },
-    { start: 23, end: 27, value: "FREE" }
+    { start: 3, end: 11, value: "ASLEEP - ZZZ", color: "yellow" },
+    { start: 11, end: 17, value: "BUSY - STUDYING", color: "red"  },
+    { start: 17, end: 19, value: "FREE", color: "green"  },
+    { start: 19, end: 23, value: "BUSY - STUDYING", color: "red"  },
+    { start: 23, end: 27, value: "FREE", color: "green"  }
   ];
 
   let curActv = "UNKNOWN";
   for (let i = 0; i < activities.length; i++) {
-    const { start, end, value } = activities[i];
+    const { start, end, value, color } = activities[i];
     const curHour = now.getHours();
     if (curHour >= start && curHour < end) {
       curActv = value;
+      ping.load(`public-assets/animation/Ping-${color}.json`)
+      console.log(color)
       break;
     }
   }
@@ -402,4 +406,18 @@ buttonDiscord.addEventListener('click', () => {
   timeoutId = setTimeout(() => {
     clicks = 0;
   }, 2000);
+});
+
+// lottie animation trigger
+let myPlayer = document.getElementById("mobile-support-player");
+let mediaQuery = window.matchMedia("(max-width: 600px)");
+
+mediaQuery.addListener(function() {
+  if (mediaQuery.matches) {
+    // Screen width is less than or equal to 768px
+    myPlayer.play();
+  } else {
+    // Screen width is greater than 768px
+    myPlayer.stop();
+  }
 });

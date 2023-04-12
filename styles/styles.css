@@ -425,7 +425,7 @@ transform: translateY(0px);
   background-color: #000000a4;
   position: absolute;
   backdrop-filter: blur(10px);
-  transition: ease all .5s;
+  
   padding: 20px;
   display: flex;
   align-items: center;
