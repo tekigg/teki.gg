@@ -399,8 +399,13 @@ transform: translateY(0px);
 }
 .tooltip {
   animation: tooltip 0.5s ease-in-out forwards;
+  -webkit-animation: tooltip 0.5s ease-in-out forwards;
+  -webkit-backface-visibility: hidden;
+
 }
 #tooltip {
+  text-align: center;
+  width: 100%;
   position: absolute;
   color: white;
   font-family: Inter, sans-serif;

@@ -367,9 +367,14 @@ setInterval(() => {
   button.style.transform = `rotate(${angle}deg)`;
 }, 10);
 
+const tooltipTexts = ['COPIED!', 'DOUBLE COPY!', 'TRIPLE COPY!', 'DOMINATING!', 'RAMPAGE!', 'MEGA COPY!', 'UNSTOPPABLE!', 'WICKED SICK!', 'MONSTER COPY!', 'GODLIKE!!', 'BEYOND GODLIKE!!!!'];
+let clicks = 0;
+
 buttonDiscord.addEventListener('click', () => {
   copyToClipboard(discordID);
-  tooltip.classList.remove("tooltip"); // remove the tooltip class
-  tooltip.offsetWidth; // force a reflow to ensure the animation restarts
-  tooltip.classList.add("tooltip"); // add the tooltip class back
+  tooltip.classList.remove('tooltip');
+  tooltip.innerText = tooltipTexts[clicks % tooltipTexts.length];
+  tooltip.offsetWidth;
+  tooltip.classList.add('tooltip');
+  clicks++;
 });
