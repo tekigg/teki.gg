@@ -268,7 +268,7 @@ function addBio() {
   if (IsTimeState === false) {
     const ageMil = new Date() - new Date('2005-03-28')
     const age = ageMil / (1000 * 60 * 60 * 24 * 365.25);
-    randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer! I am exactly ${age.toFixed(12)} years old~\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`);
+    randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer! I am exactly ${age.toFixed(10)} years old~\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`);
   
   }
   else {
@@ -281,7 +281,6 @@ function animateIn() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
   animateText("`(*>﹏<*)′↗", "ABOUT ME!", true)
   addBio();
-  setInterval(addBio, 1000);
   spotify.style.opacity = "0%"
   spotify.style.marginTop = "-100px"
   spotify.style.visibility = "hidden"
@@ -293,6 +292,8 @@ function animateIn() {
   socials.style.cursor = "pointer"
   terminalText.style.transition = "1s"
   terminalText.style.fontSize = `${parseInt(fontSize) + 2}px`
+  setInterval(addBio, 2000);
+
 }
 
 
