@@ -269,10 +269,6 @@ body {
   filter: drop-shadow(0px 0px 60px #ffc22780);
 }
 
-#button:hover {
-  width: 50%;
-}
-
 #button:active {
   width: 48%;
 }
@@ -513,6 +509,10 @@ body {
   #spotify-player-container {
     top: 10rem;
   }
+}
+
+.button-container:hover > #button {
+  width: 50%;
 }
 
 @media (max-width: 1040px) and (max-height: 750px) {
