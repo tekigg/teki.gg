@@ -1,3 +1,4 @@
+
 // tiles
 const wrapper = document.getElementById("tiles");
 
@@ -185,7 +186,6 @@ function updateTime() {
 
   const curDate = now.toLocaleDateString("en-US", optionsDate);
   const curTime = now.toLocaleTimeString("en-US", optionsTime);
-
   const activities = [
     { start: 3, end: 11, value: "ASLEEP - ZZZ", color: "yellow" },
     { start: 11, end: 17, value: "BUSY - STUDYING", color: "red" },
@@ -264,11 +264,24 @@ const discordID = "Teki#0001"
 const style = window.getComputedStyle(terminalText);
 const spotify = document.getElementById('spotify-player-container')
 
+function addBio() {
+  if (IsTimeState === false) {
+    const ageMil = new Date() - new Date('2005-03-28')
+    const age = ageMil / (1000 * 60 * 60 * 24 * 365.25);
+    randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer! I am exactly ${age.toFixed(12)} years old~\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`);
+  
+  }
+  else {
+    return
+  }
+}
+
 function animateIn() {
   IsTimeState = false
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
   animateText("`(*>﹏<*)′↗", "ABOUT ME!", true)
-  randomizeText(`Yahallo!~ I'm Teki! ૮ ˶ᵔ ᵕ ᵔ˶ ა\nA graphic designer, VFX artist, beginner developer and streamer!\nI'm more than open to talk about anything design, psychology, or gaming related! Don't be afraid to dm me!~`)
+  addBio();
+  setInterval(addBio, 1000);
   spotify.style.opacity = "0%"
   spotify.style.marginTop = "-100px"
   spotify.style.visibility = "hidden"
@@ -281,6 +294,7 @@ function animateIn() {
   terminalText.style.transition = "1s"
   terminalText.style.fontSize = `${parseInt(fontSize) + 2}px`
 }
+
 
 function animateOut() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
