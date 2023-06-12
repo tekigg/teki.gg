@@ -279,7 +279,7 @@ function addBio() {
 function animateIn() {
   IsTimeState = false
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
-  animateText("`(*>﹏<*)′🡽", "ABOUT ME!", true)
+  animateText("`(*>﹏<*)′↗", "ABOUT ME!", true)
   addBio();
   spotify.style.opacity = "0%"
   spotify.style.marginTop = "-100px"
@@ -299,7 +299,7 @@ function animateIn() {
 
 function animateOut() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
-  animateText("o(*￣︶￣*)ブ🡽", "HELLO, HELLO!", true)
+  animateText("o(*￣︶￣*)ブ↗", "HELLO, HELLO!", true)
 
 
   terminalText.style.fontSize = "15px"
