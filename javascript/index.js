@@ -299,7 +299,7 @@ function animateIn() {
 
 function animateOut() {
   fontSize = style.getPropertyValue("font-size").slice(0, -2);
-  animateText("o(*￣︶￣*)ブ🡽", "HELLO, HELLO!", true)
+  animateText("o(*￣︶￣*)↗", "HELLO, HELLO!", true)
 
 
   terminalText.style.fontSize = "15px"
