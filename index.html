@@ -1,103 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="apple-touch-icon" sizes="180x180" href="public-assets/favi/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public-assets/favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public-assets/favi/favicon-16x16.png">
-    <link rel="manifest" href="public-assets/favi/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public-assets/favi/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public-assets/favi/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public-assets/favi/favicon-16x16.png"
+    />
+    <link rel="manifest" href="public-assets/favi/site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale = 1.0"
+    />
     <title>TEKI 🍱</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <title>TEKI 🍱</title>
-    <meta name="title" content="TEKI 🍱">
-    <meta name="description" content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://teki.gg/">
-    <meta property="og:title" content="TEKI 🍱">
-    <meta property="og:description" content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。">
-    <meta property="og:image" content="https://teki.gg/public-assets/assets/cover.png">
-    <meta name="theme-color" content="#000000">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://teki.gg/">
-    <meta property="twitter:title" content="TEKI 🍱">
-    <meta property="twitter:description"
-        content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。">
-    <meta property="twitter:image" content="https://teki.gg/public-assets/assets/cover.png">
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" async></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" async></script>
+    <meta name="title" content="TEKI 🍱" />
+    <meta
+      name="description"
+      content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://teki.gg/" />
+    <meta property="og:title" content="TEKI 🍱" />
+    <meta
+      property="og:description"
+      content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。"
+    />
+    <meta
+      property="og:image"
+      content="https://teki.gg/public-assets/assets/cover.png"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://teki.gg/" />
+    <meta property="twitter:title" content="TEKI 🍱" />
+    <meta
+      property="twitter:description"
+      content="Some info about me, as well as links to all my socials!! (>v<。)ノ))☆.。"
+    />
+    <meta
+      property="twitter:image"
+      content="https://teki.gg/public-assets/assets/cover.png"
+    />
+  </head>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"
+    async
+  ></script>
+  <script
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    async
+  ></script>
 
-<body>
+  <body>
     <div id="noise" draggable="false"></div>
     <div id="Mobile-support" draggable="false">
-        <div>
-            <lottie-player id="mobile-support-player" src="public-assets/animation/mobile-support.json"
-                background="transparent" speed="1" autoplay></lottie-player>
-        </div>
+      <div>
+        <lottie-player
+          id="mobile-support-player"
+          src="public-assets/animation/mobile-support.json"
+          background="transparent"
+          speed="1"
+          autoplay
+        ></lottie-player>
+      </div>
     </div>
     <div id="strip">
-        <lottie-player src="public-assets/animation/strip.json" background="transparent" speed="1" loop
-            autoplay></lottie-player>
+      <lottie-player
+        src="public-assets/animation/strip.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
     </div>
     <div id="main-content">
-        <div id="logo-wrapper">
-            <img id="logo" src="public-assets/assets/logo.svg" draggable="false">
+      <div id="logo-wrapper">
+        <img id="logo" src="public-assets/assets/logo.svg" draggable="false" />
+      </div>
+      <div id="terminal">
+        <div id="button-container" class="button-container">
+          <img
+            src="public-assets/assets/button.svg"
+            class="button"
+            id="button"
+          />
         </div>
-        <div id="terminal">
+        <div id="terminal-right">
+          <span id="terminal-text-container">
+            <lottie-player
+              renderer="html"
+              class="ping"
+              background="transparent"
+              resizeMode="cover"
+              speed="1"
+              loop
+              autoplay
+            ></lottie-player>
+            <p class="terminal-text"></p>
+          </span>
+          <a
+            href="https://spotify.com"
+            target="_blank"
+            id="spotify-player-container"
+          >
+            <img src="public-assets/assets/song.webp" id="cover" />
+            <div id="song-details">
+              <div id="song-details-name">
+                <div id="song"></div>
+                <div id="artist"></div>
+              </div>
 
-            <div id="button-container" class="button-container"><img src="public-assets/assets/button.svg" class="button" id="button"> </img>
+              <span
+                style="
+                  display: flex;
+                  align-items: center;
+                  font-weight: 700;
+                  color: rgba(255, 255, 255, 0.597);
+                "
+              >
+                <img
+                  src="public-assets/assets/spotify.svg"
+                  alt=""
+                  id="spotify-logo"
+                />
+                <span>Spotify</span>
+              </span>
             </div>
-            <div id="terminal-right">
-                <span id="terminal-text-container">
-                    <lottie-player renderer="html" class="ping" background="transparent" resizeMode='cover' speed="1"
-                        loop autoplay></lottie-player>
-                    <p class="terminal-text"> </p>
-
-                </span>
-                <a href="https://spotify.com" target="_blank" id="spotify-player-container">
-                    <img src="public-assets/assets/song.webp" id="cover">
-                    <div id="song-details">
-                        <div id="song-details-name">
-                            <div id="song"></div>
-                            <div id="artist"></div>
-                        </div>
-
-                        <span
-                            style="display: flex; align-items: center; font-weight: 700; color: rgba(255, 255, 255, 0.597);">
-                            <img src="public-assets/assets/spotify.svg" alt="" id="spotify-logo">
-                            <span>Spotify</span>
-                        </span>
-
-                    </div>
-                </a>
-                <div id="socials">
-                    <a href="https://twitch.tv/TekiGG/about" target="_blank" class="social-box"><img class="social-icon"
-                            src="public-assets/socials/Twitch.svg"></a>
-                    <a id="discord" class="social-box">
-                        <div id="tooltip">COPIED!</div><img class="social-icon" src="public-assets/socials/Discord.svg">
-                    </a>
-                    <a href="https://twitter.com/TekiGG_" target="_blank" class="social-box"><img class="social-icon"
-                            src="public-assets/socials/Twitter.svg"></a>
-                </div>
-                <span>
-                    <p id="coords">LOADING GEO DATA... //</p>
-                    <p class="ml16"></p>
-                    <p class="ml16"></p>
-                </span>
-            </div>
-            <img src="public-assets/test-assets/SVG/edge-crop.svg" id="terminal-left" draggable="false">
+          </a>
+          <div id="socials">
+            <a
+              href="https://twitch.tv/TekiGG/about"
+              target="_blank"
+              class="social-box"
+              ><img class="social-icon" src="public-assets/socials/Twitch.svg"
+            /></a>
+            <a id="discord" class="social-box">
+              <div id="tooltip">COPIED!</div>
+              <img
+                class="social-icon"
+                src="public-assets/socials/Discord.svg"
+              />
+            </a>
+            <a
+              href="https://twitter.com/TekiGG_"
+              target="_blank"
+              class="social-box"
+              ><img class="social-icon" src="public-assets/socials/Twitter.svg"
+            /></a>
+          </div>
+          <span>
+            <p id="coords">LOADING GEO DATA... //</p>
+            <p class="ml16"></p>
+            <p class="ml16"></p>
+          </span>
         </div>
+        <img
+          src="public-assets/test-assets/SVG/edge-crop.svg"
+          id="terminal-left"
+          draggable="false"
+        />
+      </div>
     </div>
     <div class="vignette"></div>
-    <div id="gradients" class="gradients"><lottie-player src="public-assets/animation/Halo.json"
-            background="transparent" resizeMode='cover'
-            style="width: 100vw; will-change: transform; transform: translateZ(0); " speed="1" loop
-            autoplay></lottie-player>
+    <div id="gradients" class="gradients">
+      <lottie-player
+        src="public-assets/animation/Halo.json"
+        background="transparent"
+        resizeMode="cover"
+        style="width: 100vw; will-change: transform; transform: translateZ(0)"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
     </div>
     <div id="tiles"></div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" async></script>
-<script src="javascript/index.min.js"></script>
+  </body>
+</script>
+  <script src="javascript/index.js"></script>
 </html>
