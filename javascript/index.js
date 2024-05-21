@@ -260,7 +260,7 @@ const buttonDiscord = document.getElementById('discord');
 const tooltip = document.getElementById('tooltip');
 const terminalText = document.querySelector('.terminal-text');
 const socials = document.getElementById('socials')
-const discordID = "teki2.0"
+const discordID = "tekigg"
 const style = window.getComputedStyle(terminalText);
 const spotify = document.getElementById('spotify-player-container')
 
